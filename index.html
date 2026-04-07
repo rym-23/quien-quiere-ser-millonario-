@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Quién Quiere Ser Millonario · Edición Diamante</title>
+    <link rel="icon" type="image/png" href="icon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -570,11 +571,11 @@
         <h2><i class="fas fa-crown"></i> MILLONARIO</h2>
         <div class="name-input-group">
             <label><i class="fas fa-user"></i> Jugador 1</label>
-            <input type="text" id="name1-input" value="Magnate" maxlength="15" placeholder="Nombre">
+            <input type="text" id="name1-input" value="Jugador 1" maxlength="15" placeholder="Nombre">
         </div>
         <div class="name-input-group">
             <label><i class="fas fa-user"></i> Jugador 2</label>
-            <input type="text" id="name2-input" value="Genio" maxlength="15" placeholder="Nombre">
+            <input type="text" id="name2-input" value="Jugador 2" maxlength="15" placeholder="Nombre">
         </div>
         <div class="name-error" id="name-error">Ambos nombres son obligatorios</div>
         <button class="btn" id="start-btn">INICIAR JUEGO</button>
@@ -584,17 +585,17 @@
 <div class="container">
     <div class="header">
         <h1>¿QUIÉN QUIERE SER MILLONARIO?</h1>
-        <p id="subtitle">Magnate vs Genio · 15 PREGUNTAS DE ÉLITE</p>
+        <p id="subtitle">Jugador 1 vs Jugador 2 · 15 PREGUNTAS DE ÉLITE</p>
     </div>
     
     <div style="text-align: center;">
-        <div class="turn-indicator" id="turn-indicator"><i class="fas fa-crown"></i> Turno de: Magnate</div>
+        <div class="turn-indicator" id="turn-indicator"><i class="fas fa-crown"></i> Turno de: Jugador 1</div>
     </div>
     <div class="progress-container"><div class="progress-bar" id="progress-bar"></div></div>
     
     <div class="players">
         <div class="player User1 active" id="player1">
-            <h2>Magnate</h2>
+            <h2>Jugador 1</h2>
             <div class="score" id="score1">0</div>
             <div class="questions-done" id="questions1">0/15</div>
             <div class="comodines">
@@ -604,7 +605,7 @@
             </div>
         </div>
         <div class="player User2" id="player2">
-            <h2>Genio</h2>
+            <h2>Jugador 2</h2>
             <div class="score" id="score2">0</div>
             <div class="questions-done" id="questions2">0/15</div>
             <div class="comodines">
@@ -654,7 +655,7 @@
         let currentQuestion = 0, score1 = 0, score2 = 0, questionsDone1 = 0, questionsDone2 = 0;
         let isPlayer1Turn = true, questions = [];
         let timerInterval, timeLeft, backgroundMusic, isMusicPlaying = false;
-        let player1Name = "Magnate", player2Name = "Genio";
+        let player1Name = "Jugador 1", player2Name = "Jugador 2";
         let comodines1 = { fifty: { cantidad: 1 }, call: { cantidad: 1 }, risk: { cantidad: 1 } };
         let comodines2 = { fifty: { cantidad: 1 }, call: { cantidad: 1 }, risk: { cantidad: 1 } };
         
@@ -863,8 +864,8 @@
                     <div class="ruleta-wrapper">
                         <div class="ruleta" id="ruleta-modal">
                             <div class="ruleta-label" style="top: 12%; left: 50%; transform: translateX(-50%);">Lea</div>
-                            <div class="ruleta-label" style="top: 72%; left: 85%; transform: translate(-50%, -50%);">Juanes</div>
-                            <div class="ruleta-label" style="top: 72%; left: 15%; transform: translate(-50%, -50%);">Rym</div>
+                            <div class="ruleta-label" style="top: 72%; left: 15%; transform: translate(-50%, -50%);">Juanes</div>
+                            <div class="ruleta-label" style="top: 72%; left: 85%; transform: translate(-50%, -50%);">Rym</div>
                         </div>
                         <div class="ruleta-flecha"></div>
                     </div>
